@@ -1,0 +1,4 @@
+folium==0.14.0
+numpy==1.23.4
+Requests==2.31.0
+skyfield==1.46
