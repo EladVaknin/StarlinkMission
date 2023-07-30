@@ -46,9 +46,50 @@ While Starlink is primarily designed to provide global internet access, its sate
 ![image](https://github.com/EladVaknin/StarlinkMission/assets/74238558/4a34b115-5910-45c6-aeb0-d323ba44a0ec)
 
 
-Note: The simulated GPS functionality in this project is based on the positions of Starlink satellites at the current datetime and uses dummy observed altitude and azimuth values for RMS calculations. 
 
 
+
+
+
+
+# Feature 2 - Ideal Transmitter Point:
+the application now displays an ideal point within the specified radius, which represents the most suitable location to place a transmitter for optimal satellite communication.
+
+Displaying the Ideal Point
+The ideal point is marked on the map with a red marker. The popup for the red marker indicates that it represents the "Ideal Point." This point is calculated as the centroid of all the satellite positions within the specified radius. 
+This is the best point in the radius to put the transmitter.
+ Placing a transmitter at this location would provide signal quality and reducing communication disruptions.
+
+### Instructions
+1. Run ideal.py script.
+2. Input random location an radius 
+![image](https://github.com/EladVaknin/StarlinkMission/assets/74238558/8bdfa533-f0c1-454f-9bbc-c5452c6f2908)
+4. You got the ideal point in the radius to put the transmitter:
+![image](https://github.com/EladVaknin/StarlinkMission/assets/74238558/02e6048f-4ce1-4f4f-b49e-aaf654f46d0b)
+
+# Feature 3  - Navigation by RMS :
+In this feature we will set a starting point in the code (line 213).
+and choose a random point and radius as mentioned above.
+This script creates a simulation of the best route of the RMS until reaching the selected point.
+The route is marked with a red line.
+
+1. run navigation.py
+2. 
+
+
+
+
+
+
+
+
+#
+
+Notes:
+*  This link https://celestrak.org/NORAD/elements/starlink.txt issues the information and is limited in its readability.
+In case it doesn't respond please use the starlink.txt file.
+
+ * The simulated GPS functionality in this project is based on the positions of Starlink satellites at the current datetime and uses dummy observed altitude and azimuth values for RMS calculations.
 
  **Instructed by Professor Boaz Ben Moshe.**
 
@@ -59,8 +100,3 @@ Note: The simulated GPS functionality in this project is based on the positions 
 - [Starlink Official Website](https://www.starlink.com/)
 - [Skyfield Library Documentation](https://rhodesmill.org/skyfield/)
 - https://celestrak.org/NORAD/elements/
-
-
-
-
-
