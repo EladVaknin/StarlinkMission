@@ -53,12 +53,12 @@ While Starlink is primarily designed to provide global internet access, its sate
 
 
 # Feature 2 - Ideal Transmitter Point:
-the application now displays an ideal point within the specified radius, which represents the most suitable location to place a transmitter for optimal satellite communication.
+In this feature, the application receives a random point in the radius and now displays the most ideal point, this point represents the most suitable location to place a transmitter for optimal satellite communication.
 
-Displaying the Ideal Point
-The ideal point is marked on the map with a red marker. The popup for the red marker indicates that it represents the "Ideal Point." This point is calculated as the centroid of all the satellite positions within the specified radius. 
+Showing the ideal point
+The ideal point is marked on the map in red. The red marker popup indicates that it represents the "ideal point". This point is calculated as the center of all satellite locations within the specified radius.
 This is the best point in the radius to put the transmitter.
- Placing a transmitter at this location would provide signal quality and reducing communication disruptions.
+Placing a transmitter in this location will provide signal quality and reduce communication interference.
 
 ### Instructions
 1. Run ideal.py script.
@@ -68,13 +68,13 @@ This is the best point in the radius to put the transmitter.
 ![image](https://github.com/EladVaknin/StarlinkMission/assets/74238558/02e6048f-4ce1-4f4f-b49e-aaf654f46d0b)
 
 # Feature 3  - Navigation by RMS :
-In this feature we will set a starting point in the code (line 213).
-and choose a random point and radius as mentioned above.
-This script creates a simulation of the best route of the RMS until reaching the selected point.
+In this feature we will define the starting point in the code (line 213).
+And choose a random point and radius as mentioned above - which is the target point.
+This simulation will try to create the best route between the two points according to the RMS data, until reaching the selected point.
 The route is marked with a red line.
-
 1. run navigation.py
-2. 
+2. ![image](https://github.com/EladVaknin/StarlinkMission/assets/74238558/511b99ac-14e4-4172-8531-5820856e206f)
+
 
 
 
