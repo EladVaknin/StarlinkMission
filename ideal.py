@@ -24,7 +24,7 @@ def haversine(lon1, lat1, lon2, lat2):
     dlon = lon2_rad - lon1_rad
     dlat = lat2_rad - lat1_rad
 
-    # Haversine formula
+    # Haversine formula - https://en.wikipedia.org/wiki/Haversine_formula
     a = sin(dlat / 2)**2 + cos(lat1_rad) * cos(lat2_rad) * sin(dlon / 2)**2
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
@@ -32,6 +32,7 @@ def haversine(lon1, lat1, lon2, lat2):
     distance = R * c
 
     return distance
+    
 # Function to calculate the distance between two points on Earth
 def calculate_distance(lat1, lon1, lat2, lon2):
     # Convert latitude and longitude from degrees to radians
@@ -74,10 +75,7 @@ def calculate_rms(predicted, observed):
 # Function to calculate satellite positions and RMS
 def calculate_positions_and_rms(tle_data):
     ts = load.timescale()
-
-    # Current datetime
     t = ts.now()
-
     satellite_data = []
 
     # Calculate positions and RMS for each satellite
@@ -160,17 +158,12 @@ def show_map(satellites, input_lat, input_lon, input_radius):
 
     # Add the satellites group to the map
     satellites_group.add_to(m)
-
-    # Add a circle to represent the radius
     folium.Circle(location=map_center, radius=input_radius * 1000, color='blue', fill=False).add_to(m)
 
     # Add a red marker for the centroid (most ideal point)
     folium.Marker([centroid_lat, centroid_lon], popup="Ideal Point", icon=folium.Icon(color='red')).add_to(m)
 
-    # Save the map to an HTML file
     m.save("map.html")
-
-    # Open the HTML file in a web browser
     webbrowser.open("map.html")
 
 # Function to handle the TLE data URL input and display drones on the map
