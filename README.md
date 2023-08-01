@@ -88,8 +88,8 @@ The route is marked with a red line.
 #
 
 Notes:
-*  This link https://celestrak.org/NORAD/elements/starlink.txt issues the information and is limited in its readability.
-In case it doesn't respond please use the starlink.txt file.
+*  This link https://celestrak.org/NORAD/elements/starlink.txt issues the information and is limited in API calls, therefore receiving updated information is limited (each run or iteration is a new API request).
+  In case it doesn't respond, use the starlink.txt file - which stands for static information.
 
  * The simulated GPS functionality in this project is based on the positions of Starlink satellites at the current datetime and uses dummy observed altitude and azimuth values for RMS calculations.
 
