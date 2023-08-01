@@ -26,7 +26,7 @@ While Starlink is primarily designed to provide global internet access, its sate
 5. Integration with Internet Services: Utilizing Starlink for location services can be advantageous for applications that require both location data and internet connectivity, as it offers both functionalities from a single system.
 
 ## How to use the code
-
+- Please read the notes below.
 1. Install the required libraries:
    - tkinter
    - webbrowser
@@ -34,6 +34,7 @@ While Starlink is primarily designed to provide global internet access, its sate
    - skyfield
    - requests
    - numpy
+   - shapely
    - (you can download requirements.txt file and run pip install -r requirements.txt)
 2. Run the Python script: Execute the code in a Python environment that has the required libraries installed.
 
@@ -72,6 +73,7 @@ In this feature we will define the starting point in the code (line 213).
 And choose a random point and radius as mentioned above - which is the target point.
 This simulation will try to create the best route between the two points according to the RMS data, until reaching the selected point.
 The route is marked with a red line.
+1. make sure that the choosed points in the radius.
 1. run navigation.py
 2. ![image](https://github.com/EladVaknin/StarlinkMission/assets/74238558/511b99ac-14e4-4172-8531-5820856e206f)
 
