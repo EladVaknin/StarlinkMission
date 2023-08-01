@@ -25,7 +25,7 @@ def haversine(lon1, lat1, lon2, lat2):
     dlon = lon2_rad - lon1_rad
     dlat = lat2_rad - lat1_rad
 
-    # Haversine formula
+    # Haversine formula - https://en.wikipedia.org/wiki/Haversine_formula
     a = sin(dlat / 2)**2 + cos(lat1_rad) * cos(lat2_rad) * sin(dlon / 2)**2
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
@@ -33,6 +33,7 @@ def haversine(lon1, lat1, lon2, lat2):
     distance = R * c
 
     return distance
+    
 # Function to calculate the distance between two points on Earth
 def calculate_distance(lat1, lon1, lat2, lon2):
     # Convert latitude and longitude from degrees to radians
@@ -75,10 +76,7 @@ def calculate_rms(predicted, observed):
 # Function to calculate satellite positions and RMS
 def calculate_positions_and_rms(tle_data):
     ts = load.timescale()
-
-    # Current datetime
     t = ts.now()
-
     satellite_data = []
 
     # Calculate positions and RMS for each satellite
@@ -162,7 +160,6 @@ def simulate_movement(start_lat, start_lon, target_lat, target_lon, satellites):
     return current_lat, current_lon, path
 
 def show_map(satellites, input_lat, input_lon, input_radius, path=None):
-    # Check if the list is empty
     if not satellites:
         print("No satellites found within the specified radius.")
         return
